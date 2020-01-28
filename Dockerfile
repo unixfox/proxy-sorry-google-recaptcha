@@ -3,7 +3,8 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-EXPOSE 8080
 ENV CA_PATH /ca
 ENV DB_PATH /db.json
+ENV PORT 8080
+EXPOSE 8080
 CMD [ "npm", "start" ]
