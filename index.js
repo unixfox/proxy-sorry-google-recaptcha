@@ -5,7 +5,7 @@ import * as antiCaptcha from "./anticaptcha.js";
 import { promises as fsPromises } from "fs";
 import fs from "fs";
 
-const sslCAPath = (process.env.CA_PATH || process.cwd(), 'ca');
+const sslCAPath = (process.env.CA_PATH || process.cwd() + 'ca');
 const databaseFilePath = (process.env.DB_PATH || "./db.json");
 const port = (process.env.PORT || 8081);
 const proxy = Proxy();
