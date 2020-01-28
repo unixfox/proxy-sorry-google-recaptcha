@@ -1,3 +1,4 @@
+![GitHub stars](https://img.shields.io/github/stars/unixfox/proxy-sorry-google-recaptcha.svg?style=social) [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/unixfox/proxy-sorry-google-recaptcha.svg)](https://hub.docker.com/r/unixfox/proxy-sorry-google-recaptcha) [![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/unixfox/proxy-sorry-google-recaptcha.svg)](https://hub.docker.com/r/unixfox/proxy-sorry-google-recaptcha) ![GitHub package.json version](https://img.shields.io/github/package-json/v/unixfox/proxy-sorry-google-recaptcha.svg)
 # How to use it?
 
 1. Install NodeJS 12 or more and then `npm install`.
