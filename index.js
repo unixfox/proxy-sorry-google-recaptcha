@@ -19,6 +19,10 @@ if (fs.existsSync(databaseFilePath)) {
 
 const googleHosts = /(^www\.google\.[a-z]+$)|(^www\.youtube\.com$)|(^www\.youtu\.be$)/;
 
+proxy.onError(function (ctx, err) {
+    console.error('proxy error:', err);
+});
+
 proxy.onRequest((ctx, callback) => {
     if (googleHosts.test(ctx.clientToProxyRequest.headers.host)) {
         if (ctx.clientToProxyRequest.url.indexOf("/sorry") == 0) {
