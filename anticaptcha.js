@@ -51,7 +51,6 @@ export const submitRecaptchaResponse = function (gRecaptchaResponse, URL) {
         const cookieJar = new toughCookie.CookieJar();
         const queries = queryString.parseUrl(URL).query;
         got.post("https://www.google.com/sorry/index", {
-            method: "POST",
             form: {
                 "g-recaptcha-response": gRecaptchaResponse,
                 q: queries.q,
@@ -65,7 +64,8 @@ export const submitRecaptchaResponse = function (gRecaptchaResponse, URL) {
                 "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3",
                 "Content-Type": "application/x-www-form-urlencoded"
             },
-            cookieJar
+            cookieJar,
+            methodRewriting: false
         }).then(() => {
             const cookiesStringRedirectedWebsite = cookieJar.getCookieStringSync("https://" + Object.entries(cookieJar.store.idx)[0][0], { allPaths: true });
             resolve(cookie.parse(cookiesStringRedirectedWebsite)["GOOGLE_ABUSE_EXEMPTION"]);
