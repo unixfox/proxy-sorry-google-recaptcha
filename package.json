@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "cookie": "^0.4.0",
+    "delay": "^4.3.0",
     "got": "^10.3.0",
     "http-mitm-proxy": "^0.8.2",
     "query-string": "^6.10.1",
