@@ -60,5 +60,5 @@ proxy.onRequest((ctx, callback) => {
     return callback();
 });
 
-proxy.listen({ port: port, sslCaDir: sslCAPath });
+proxy.listen({ port: port, sslCaDir: sslCAPath, keepAlive: true });
 console.log("Proxy ready to accept requests on port: " + port);
